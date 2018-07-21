@@ -4,7 +4,8 @@ Convolutional Autoencoder (CAE) implemented with Chainer
 ## Requirement
 - Python 3.X
 - Chainer >=3.0
-- PIL
+- matplotlib
+- tqdm
 
 ## Usage
 Chainer model is defined with `network.py`
