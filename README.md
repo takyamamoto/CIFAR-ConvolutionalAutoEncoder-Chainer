@@ -33,7 +33,7 @@ dot -Tpng graph.dot -o graph.png
 ```
 
 ## Model
-<img src="https://github.com/takyamamoto/CIFAR-ConvolutionalAutoEncoder-Chainer/blob/3depth_model/graph.png" width=20%>
+<img src="https://github.com/takyamamoto/CIFAR-ConvolutionalAutoEncoder-Chainer/blob/depth3_model/graph.png" width=20%>
 
 ## Result
-<img src="https://github.com/takyamamoto/CIFAR-ConvolutionalAutoEncoder-Chainer/blob/3depth_model/result.png">
+<img src="https://github.com/takyamamoto/CIFAR-ConvolutionalAutoEncoder-Chainer/blob/depth3_model/result.png">
