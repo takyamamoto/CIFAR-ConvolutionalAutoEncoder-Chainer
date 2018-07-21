@@ -36,15 +36,7 @@ class CAE(chainer.Chain):
         img = Image.fromarray(img)
         img.save(filename)
         
-    def __call__(self, x, t):
-        if self.directory is not None:
-            for i in range(x.shape[0]):
-                filename = self.directory + "input" + str(i) + ".png"
-                #print(x.shape)
-                xi = x[i]
-                xi = F.transpose(xi, (1, 2, 0))
-                self.save_image(xi.data, filename)
-            
+    def __call__(self, x, t):            
         # Encoder
         e = F.relu(self.conv1(x))
         e = F.max_pooling_2d(e,ksize=2, stride=2,)
@@ -59,16 +51,17 @@ class CAE(chainer.Chain):
         d = F.unpooling_2d(d, ksize=2, stride=2, cover_all=False)
         out = F.sigmoid(self.conv6(d))
 
+        #print(out.dtype)
+        #print(t.dtype)
+        #print(t.shape)
+        """
         if self.directory is not None:
             for i in range(out.shape[0]):
                 filename = self.directory + "output" + str(i) + ".png"
                 outi = out[i]
                 outi = F.transpose(outi, (1, 2, 0))
                 self.save_image(outi.data, filename)
-                    
-        #print(out.dtype)
-        #print(t.dtype)
-        #print(t.shape)
+        """         
 
         loss = F.mean_squared_error(out,t)
         
