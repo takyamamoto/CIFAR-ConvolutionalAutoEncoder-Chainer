@@ -32,7 +32,7 @@ class LoadDataset(dataset.DatasetMixin):
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument('--gpu', '-g', type=int, default=-1)
-    parser.add_argument('--model', '-m', type=str, default="./results/model")
+    parser.add_argument('--model', '-m', type=str, default=None)
     parser.add_argument('--opt', type=str, default=None)
     parser.add_argument('--epoch', '-e', type=int, default=10)
     parser.add_argument('--lr', '-l', type=float, default=0.001)

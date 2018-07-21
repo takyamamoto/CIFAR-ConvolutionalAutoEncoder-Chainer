@@ -16,7 +16,7 @@ from PIL import Image
 # Network definition
 class CAE(chainer.Chain):
 
-    def __init__(self, n_input, n_out, directory=None):
+    def __init__(self, n_input, n_out, directory=None, return_out=False):
         super(CAE, self).__init__(
                 conv1 = L.Convolution2D(None, 64, 3, pad=1),
                 conv2 = L.Convolution2D(None, 128, 3, pad=1),
@@ -27,6 +27,7 @@ class CAE(chainer.Chain):
                 conv6 = L.Convolution2D(None, 3, 3, pad=1)
                 )
         self.directory = directory
+        self.return_out = return_out
 
     def save_image(self, arr, filename):
         img = chainer.cuda.to_cpu(arr)
@@ -73,4 +74,8 @@ class CAE(chainer.Chain):
         
         reporter.report({'loss': loss}, self)
         
-        return out, loss
+        if self.return_out == True:
+            return out, loss
+        else:
+            return loss
+        

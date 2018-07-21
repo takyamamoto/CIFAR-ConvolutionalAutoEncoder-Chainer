@@ -1,2 +1,38 @@
 # CIFAR-ConvolutionalAutoEncoder-Chainer
 Convolutional Autoencoder (CAE) implemented with Chainer
+
+## Requirement
+- Python 3.X
+- Chainer >=3.0
+- PIL
+
+## Usage
+Chainer model is defined with `network.py`
+### Train
+```
+python train_CAE.py -g 0 -e 20
+```
+
+### Show result
+```
+python generate.py
+```
+
+### Plot model
+First, you have to install `Graphviz`. If you use Anaconda, you can install next command.
+```
+conda install graphviz
+```
+Second, Run `plot_model.py`. Then, `graph.dot` is generated.  
+Third, convert dot file to png file with next command.
+```
+dot -Tpng graph.dot -o graph.png
+```
+
+## Model
+<img src="https://github.com/takyamamoto/Subjective-Illusory-Contour-using-Autoencoder/blob/master/imgs/LearningCurve.png" width=50%>
+## Result
+### Input
+<img src="https://github.com/takyamamoto/Subjective-Illusory-Contour-using-Autoencoder/blob/master/imgs/LearningCurve.png" width=50%>
+### Output
+<img src="https://github.com/takyamamoto/Subjective-Illusory-Contour-using-Autoencoder/blob/master/imgs/LearningCurve.png" width=50%> 

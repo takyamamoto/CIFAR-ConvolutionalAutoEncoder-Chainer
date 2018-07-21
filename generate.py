@@ -41,13 +41,13 @@ def main():
 
     test = LoadDataset(test_x)
 
-    model = network.CAE(3,3, directory="img/")
+    model = network.CAE(3,3, directory="img/", return_out=True)
     
     if args.model != None:
         print( "loading model from " + args.model )
         serializers.load_npz(args.model, model)
     
-    idx = 10
+    idx = 0
     x, t = test[idx]
     
     x = np.expand_dims(x, 0)
