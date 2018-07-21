@@ -20,7 +20,7 @@ python generate.py
 ```
 
 ### Plot model
-First, you have to install `Graphviz`. If you use Anaconda, you can install next command.
+First, you have to install `Graphviz`. If you use Anaconda, you can install with next command.
 ```
 conda install graphviz
 ```
