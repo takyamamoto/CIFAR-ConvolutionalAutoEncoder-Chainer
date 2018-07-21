@@ -35,9 +35,4 @@ dot -Tpng graph.dot -o graph.png
 <img src="https://github.com/takyamamoto/CIFAR-ConvolutionalAutoEncoder-Chainer/blob/master/graph.png" width=20%>
 
 ## Result
-
-### Input
-<img src="https://github.com/takyamamoto/CIFAR-ConvolutionalAutoEncoder-Chainer/blob/master/img/input0.png" width=20%>
-
-### Output
-<img src="https://github.com/takyamamoto/CIFAR-ConvolutionalAutoEncoder-Chainer/blob/master/img/output0.png" width=20%>
+<img src="https://github.com/takyamamoto/CIFAR-ConvolutionalAutoEncoder-Chainer/blob/master/result.png">
