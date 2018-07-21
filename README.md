@@ -23,16 +23,21 @@ First, you have to install `Graphviz`. If you use Anaconda, you can install next
 ```
 conda install graphviz
 ```
+  
 Second, Run `plot_model.py`. Then, `graph.dot` is generated.  
+
 Third, convert dot file to png file with next command.
 ```
 dot -Tpng graph.dot -o graph.png
 ```
 
 ## Model
-<img src="https://github.com/takyamamoto/Subjective-Illusory-Contour-using-Autoencoder/blob/master/imgs/LearningCurve.png" width=50%>
+<img src="https://github.com/takyamamoto/CIFAR-ConvolutionalAutoEncoder-Chainer/blob/master/graph.png" width=20%>
+
 ## Result
+
 ### Input
-<img src="https://github.com/takyamamoto/Subjective-Illusory-Contour-using-Autoencoder/blob/master/imgs/LearningCurve.png" width=50%>
+<img src="https://github.com/takyamamoto/CIFAR-ConvolutionalAutoEncoder-Chainer/blob/master/img/input0.png" width=40%>
+
 ### Output
-<img src="https://github.com/takyamamoto/Subjective-Illusory-Contour-using-Autoencoder/blob/master/imgs/LearningCurve.png" width=50%> 
+<img src="https://github.com/takyamamoto/CIFAR-ConvolutionalAutoEncoder-Chainer/blob/master/img/output0.png" width=40%>
