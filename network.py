@@ -20,8 +20,7 @@ class CAE(chainer.Chain):
         super(CAE, self).__init__(
                 conv1 = L.Convolution2D(None, 32, 3, pad=1),
                 conv2 = L.Convolution2D(None, 64, 3, pad=1),
-                conv3 = L.Convolution2D(None, 64, 3, pad=1),
-                conv4 = L.Convolution2D(None, 3, 3, pad=1)
+                conv3 = L.Convolution2D(None, 3, 3, pad=1)
                 )
         self.return_out = return_out
 
@@ -32,9 +31,8 @@ class CAE(chainer.Chain):
         e_out = F.relu(self.conv2(e))
 
         # Decoder
-        d = F.relu(self.conv3(e_out))
         d = F.unpooling_2d(e_out, ksize=2, stride=2, cover_all=False)
-        out = F.sigmoid(self.conv4(d))
+        out = F.sigmoid(self.conv3(d))
 
         loss = F.mean_squared_error(out,t)
 
