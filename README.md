@@ -11,7 +11,7 @@ Convolutional Autoencoder (CAE) implemented with Chainer
 Chainer model is defined with `network.py`
 ### Train
 ```
-python train_CAE.py -g 0 -e 20
+python train.py -g 0 -e 20
 ```
 
 ### Show result
@@ -37,3 +37,5 @@ dot -Tpng graph.dot -o graph.png
 
 ## Result
 <img src="https://github.com/takyamamoto/CIFAR-ConvolutionalAutoEncoder-Chainer/blob/master/result.png">
+### loss
+<img src="https://github.com/takyamamoto/CIFAR-ConvolutionalAutoEncoder-Chainer/blob/master/results/loss.png">
