@@ -37,5 +37,6 @@ dot -Tpng graph.dot -o graph.png
 
 ## Result
 <img src="https://github.com/takyamamoto/CIFAR-ConvolutionalAutoEncoder-Chainer/blob/master/result.png">
-### loss
-<img src="https://github.com/takyamamoto/CIFAR-ConvolutionalAutoEncoder-Chainer/blob/master/results/loss.png">
+
+### Loss
+<img src="https://github.com/takyamamoto/CIFAR-ConvolutionalAutoEncoder-Chainer/blob/master/results/loss.png" width=70%>
